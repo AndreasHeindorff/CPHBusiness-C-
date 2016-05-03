@@ -1,0 +1,2 @@
+C:\Users\Andreas\Source\Repos\cs-2016a2\HelloWorld\bin\Debug\HelloWorld.exe.config
+C:\Users\Andreas\Source\Repos\cscphbusiness\HelloWorld\bin\Debug\HelloWorld.exe.config

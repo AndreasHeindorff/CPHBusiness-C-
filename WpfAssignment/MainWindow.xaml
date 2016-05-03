@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfAssignment.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAssignment"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition/>
+      <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="30"/>
+      <RowDefinition Height="30"/>
+      <RowDefinition Height="30"/>
+      <RowDefinition Height="30"/>
+      <RowDefinition Height="30"/>
+      <RowDefinition/>
+    </Grid.RowDefinitions>
+    <Label Content="Fornavn" Grid.Column="0" Grid.Row="0"/>
+    <Label Content="Efternavn" Grid.Column="0" Grid.Row="1"/>
+    <Label Content="Fulde navn" Grid.Column="0" Grid.Row="2"/>
+    <Label Content="Alder" Grid.Column="0" Grid.Row="3"/>
+    <TextBox Text="{Binding Kurt.FirstName, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="0"/>
+    <TextBox Text="{Binding Kurt.LastName, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="1"/>
+    <TextBox Text="{Binding Kurt.FullName, Mode=OneWay}" Grid.Column="1" Grid.Row="2"/>
+    <Label Content="{Binding Kurt.Age}" Grid.Column="1" Grid.Row="3"/>
+    <Button 
+        Content="Hurra!" 
+        Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"
+        Margin="150,5,150,5" 
+        Click="HurrayButton_Click"
+        />
+    <ListBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
+        ItemsSource="{Binding Employees}"
+        DisplayMemberPath="FullName">
+    </ListBox>
+  </Grid>
+</Window>
